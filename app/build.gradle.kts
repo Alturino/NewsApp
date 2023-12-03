@@ -35,6 +35,7 @@ android {
         }
     }
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
@@ -46,7 +47,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.3"
+        kotlinCompilerExtensionVersion = "1.5.5"
     }
     packaging {
         resources {
@@ -106,4 +107,44 @@ dependencies {
 
     // Kotlinx Serialization
     implementation(libs.kotlinx.serialization.json)
+
+    // Kotlin Arrow
+    implementation(platform(libs.arrow.stack))
+    implementation(libs.arrow.core)
+    implementation(libs.arrow.core.retrofit)
+    implementation(libs.arrow.fx.coroutines)
+
+    // Paging
+    implementation(libs.androidx.paging.common.ktx)
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.paging.runtime.ktx)
+    testImplementation(libs.androidx.paging.common)
+    testImplementation(libs.androidx.paging.testing)
+
+    // Room Database
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    testImplementation(libs.androidx.room.testing)
+    implementation(libs.androidx.room.paging)
+
+    // Timber
+    implementation(libs.timber)
+
+    // Coil
+    implementation(platform(libs.coil.bom))
+    implementation(libs.coil.base)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.gif)
+    implementation(libs.coil.svg)
+    implementation(libs.coil.video)
+
+    // Material
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.androidx.material)
+
+    // Kotlinx Datetime
+    implementation(libs.kotlinx.datetime)
+
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 }
