@@ -19,7 +19,7 @@ and how you can contribute to the project.
 
 ## App Preview
 
-![News App Preview](./docs/assets/screen_recording_20231204_154128.mp4)
+![News App Preview](./docs/assets/screen_recording_20231204_155344.mp4)
 
 ## Getting Started
 
