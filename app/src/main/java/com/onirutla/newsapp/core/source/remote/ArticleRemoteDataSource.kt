@@ -6,7 +6,6 @@ import arrow.retrofit.adapter.either.networkhandling.UnexpectedCallError
 import com.onirutla.newsapp.core.source.remote.api_services.NewsApiService
 import com.onirutla.newsapp.core.source.remote.api_services.NewsSearchIn
 import com.onirutla.newsapp.core.source.remote.api_services.NewsSortBy
-import com.onirutla.newsapp.core.source.remote.api_services.NewsSourceCategory
 import com.onirutla.newsapp.core.source.remote.models.toArticle
 import com.onirutla.newsapp.domain.models.Article
 import kotlinx.datetime.LocalDateTime
@@ -53,20 +52,15 @@ class ArticleRemoteDataSource @Inject constructor(private val apiService: NewsAp
     }
 
     suspend fun getTopHeadlines(
-        category: NewsSourceCategory? = null,
-        countryCode: String? = null,
-        pageNumber: Int? = 1,
-        pageSize: Int? = 50,
-        query: String? = null,
-        sources: String? = null,
+        param: GetTopHeadlineParam,
     ): List<Article> {
         val response = apiService.getTopHeadlines(
-            pageNumber = pageNumber,
-            pageSize = pageSize,
-            query = query,
-            category = category?.value,
-            countryCode = countryCode,
-            sources = sources,
+            pageNumber = param.pageNumber,
+            pageSize = param.pageSize,
+            query = param.query,
+            category = param.category?.value,
+            countryCode = param.countryCode,
+            sources = param.sources,
         ).onLeft {
             when (it) {
                 is HttpError -> {

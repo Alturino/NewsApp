@@ -1,7 +1,6 @@
 package com.onirutla.newsapp.ui
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -10,6 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.paging.compose.collectAsLazyPagingItems
 import com.onirutla.newsapp.ui.screens.Screens
 import com.onirutla.newsapp.ui.screens.home.HomeScreen
 import com.onirutla.newsapp.ui.screens.home.HomeScreenUiEvent
@@ -32,8 +32,7 @@ fun Navigation(
         ) { backStackEntry ->
             val vm: HomeScreenViewModel = hiltViewModel()
             val state by vm.state.collectAsStateWithLifecycle()
-
-            LaunchedEffect(key1 = Unit, block = { vm.invoke() })
+            val articles = vm.articles.collectAsLazyPagingItems()
 
             HomeScreen(
                 modifier = Modifier,
@@ -46,6 +45,7 @@ fun Navigation(
                         }
                     }
                 },
+                articles = articles
             )
         }
     }
