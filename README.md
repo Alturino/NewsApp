@@ -69,7 +69,7 @@ Follow these steps to get the app up and running on your Android device or emula
 ### Architecture
 
 NewsApp architecture is based on Google Recommendation MVI and the Repository pattern.
-![Architecture](./docs/assets/mvi_architecture.png)
+![Architecture](./docs/assets/mvi.png)
 
 ## Contributing
 
