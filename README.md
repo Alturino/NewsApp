@@ -9,9 +9,9 @@ and how you can contribute to the project.
 
 - [App Preview](#App-Preview)
 - [Getting Started](#Getting-Started)
-    - [Prerequisites](#Prerequisites)
-    - [Installation](#Installation)
-    - [Architecture](#Architecture)
+  - [Prerequisites](#Prerequisites)
+  - [Installation](#Installation)
+  - [Architecture](#Architecture)
 - [Contributing](#Contributing)
 - [Bug Reporting](#Bug-Reporting)
 - [Contact](#Contact)
@@ -19,7 +19,7 @@ and how you can contribute to the project.
 
 ## App Preview
 
-![News App Preview](./docs/assets/screen_recording_20231204_155344.mp4)
+[![News App Preview](./docs/assets/screen_recording_20231204_160101.mp4)](./docs/assets/screen_recording_20231204_160101.mp4)
 
 ## Getting Started
 
