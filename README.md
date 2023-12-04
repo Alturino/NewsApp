@@ -18,8 +18,7 @@ and how you can contribute to the project.
 - [License](#License)
 
 ## App Preview
-
-[![News App Preview](./docs/assets/screen_recording_20231204_160101.mp4)](./docs/assets/screen_recording_20231204_160101.mp4)
+https://github.com/onirutlA/NewsApp/assets/59439682/282a6584-b268-4770-a46e-2cb5e50080db
 
 ## Getting Started
 
