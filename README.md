@@ -1,9 +1,6 @@
 # NewsApp
 
-Welcome to the NewsApp! This repository showcases my Android app, NewsApp, which
-aims to showcase my skill and applying what I've learned in Android Development. Whether you're an
-app enthusiast or a fellow developer, this README will guide you through setup instructions,
-and how you can contribute to the project.
+NewsApp is an application that show you news from the [NewsAPI](https://newsapi.org/docs/get-started).
 
 ## Table of Contents
 
